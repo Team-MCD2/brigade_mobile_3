@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Brigade Mobile | Réparation Téléphone Toulouse à Domicile</title>
+    <meta name="description" content="Expert en réparation de smartphones et tablettes à Toulouse. Réparation iPhone, Samsung et MacBook en 30 minutes. Service express à domicile ou en atelier.">
+    <meta name="keywords" content="réparation téléphone toulouse, réparation iphone toulouse, réparation samsung toulouse, réparation écran téléphone, la brigade mobile">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- JSON-LD for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "La Brigade Mobile",
+      "image": "logo.png",
+      "@id": "https://reparephone-toulouse.fr",
+      "url": "https://reparephone-toulouse.fr",
+      "telephone": "07 56 91 65 93",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "65 Route de Blagnac",
+        "addressLocality": "Toulouse",
+        "postalCode": "31300",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.6166,
+        "longitude": 1.4111
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00",
+          "closes": "18:00"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="header-left">
+                <a href="index.html" class="logo-group">
+                    <img src="logo.png" alt="Logo" class="main-logo">
+                    <div class="v-line"></div>
+                    <div class="brand-text">
+                        <span class="brand-name">La Brigade Mobile</span>
+                        <span class="brand-sub">TOULOUSE</span>
+                    </div>
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="reparations.html" class="dropbtn">RÉPARATIONS <i data-lucide="chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="reparations.html">
+                            <strong>Apple</strong>
+                            <span>iPhone, iPad, MacBook, iMac</span>
+                        </a>
+                        <a href="reparations.html">
+                            <strong>Samsung Galaxy</strong>
+                            <span>Séries S, A, Note, Z Flip/Fold</span>
+                        </a>
+                        <a href="devis.html">
+                            <strong>Autre marque</strong>
+                            <span>Devis guidé</span>
+                        </a>
+                    </div>
+                </li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="boutique.html">BOUTIQUE</a></li>
+                <li><a href="index.html#avis" class="nav-pill">AVIS</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+
+            <div class="header-right">
+                <a href="tel:0756916593" class="phone-icon-link">
+                    <i data-lucide="phone"></i>
+                </a>
+                <a href="devis.html" class="btn btn-devis">DEVIS</a>
+                <div class="menu-toggle" id="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="badge">Expert Réparateur à Toulouse</span>
+                    <h1>Votre téléphone réparé en <span class="highlight">30 minutes</span></h1>
+                    <p>Écran cassé ? Batterie fatiguée ? Nos techniciens experts redonnent vie à votre smartphone avec des pièces premium et une garantie de 1 an.</p>
+                    <div class="hero-btns">
+                        <a href="contact.html" class="btn btn-secondary">Trouver la boutique</a>
+                        <a href="services.html" class="btn btn-outline">Nos Tarifs</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="mascotte-brigade.png" alt="Mascotte La Brigade Mobile" class="floating">
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats/Features -->
+        <section class="features">
+            <div class="container grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="clock"></i>
+                    </div>
+                    <h3>Réparation Express</h3>
+                    <p>La plupart des pannes sont réparées en moins de 30 minutes sur place.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3>Garantie 1 An</h3>
+                    <p>Toutes nos réparations et pièces sont garanties pendant 12 mois.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="gem"></i>
+                    </div>
+                    <h3>Pièces Premium</h3>
+                    <p>Nous utilisons uniquement des pièces de qualité supérieure (AAA+).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Nos Services de Réparation</h2>
+                    <p>Nous intervenons sur toutes les marques : iPhone, Samsung, Huawei, Xiaomi, Oppo...</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1597740985671-2a8a3b80502e?auto=format&fit=crop&q=80&w=800" alt="Réparation écran">
+                        </div>
+                        <div class="service-info">
+                            <h3>Écran & Vitre</h3>
+                            <p>Remplacement d'écran LCD/OLED pour toutes marques.</p>
+                            <span class="price">À partir de 49€</span>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://image.pollinations.ai/prompt/professional_smartphone_battery_replacement_macro_shot_high_tech_clean_lighting?width=800&height=600&nologo=true" alt="Batterie téléphone">
+                        </div>
+                        <div class="service-info">
+                            <h3>Batterie</h3>
+                            <p>Votre téléphone ne tient plus la charge ? Nous la remplaçons.</p>
+                            <span class="price">À partir de 29€</span>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&q=80&w=800" alt="Connecteur de charge">
+                        </div>
+                        <div class="service-info">
+                            <h3>Connecteur de Charge</h3>
+                            <p>Problème de charge ou de faux contact ?</p>
+                            <span class="price">À partir de 39€</span>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=800" alt="Désoxydation">
+                        </div>
+                        <div class="service-info">
+                            <h3>Désoxydation</h3>
+                            <p>Sauvetage après chute dans l'eau ou liquide.</p>
+                            <span class="price">Diagnostic offert</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Avis Section -->
+        <section id="avis" class="avis">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Ce que disent nos clients</h2>
+                    <div class="google-rating">
+                        <div class="stars">
+                            <i data-lucide="star" class="star-fill"></i>
+                            <i data-lucide="star" class="star-fill"></i>
+                            <i data-lucide="star" class="star-fill"></i>
+                            <i data-lucide="star" class="star-fill"></i>
+                            <i data-lucide="star" class="star-fill"></i>
+                        </div>
+                        <span class="rating-text">4.9/5 sur Google</span>
+                    </div>
+                </div>
+                <div class="reviews-slider">
+                    <div class="review-card">
+                        <p>"Rapide, efficace et très pro. Mon iPhone 13 a été réparé en 20 min chrono. Je recommande !"</p>
+                        <div class="reviewer">
+                            <strong>Thomas M.</strong>
+                            <span>Il y a 2 jours</span>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <p>"Super accueil Route de Blagnac. Prix honnête et travail soigné sur ma batterie Samsung."</p>
+                        <div class="reviewer">
+                            <strong>Sarah L.</strong>
+                            <span>La semaine dernière</span>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <p>"La Brigade Mobile m'a sauvé mon téléphone après une chute. Merci pour la réactivité !"</p>
+                        <div class="reviewer">
+                            <strong>Jean-Pierre D.</strong>
+                            <span>Il y a 1 mois</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Questions Fréquentes</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Faut-il prendre rendez-vous ?</span>
+                            <i data-lucide="chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">Non, vous pouvez passer directement en boutique sans rendez-vous. La plupart des réparations se font sur place.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Mes données sont-elles en sécurité ?</span>
+                            <i data-lucide="chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">Oui, nous ne touchons pas à vos données personnelles. Cependant, nous conseillons toujours d'effectuer une sauvegarde par précaution.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Quelle est la durée de la garantie ?</span>
+                            <i data-lucide="chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">Toutes nos réparations sont garanties 1 an (pièces et main d'œuvre), hors casse et oxydation ultérieure.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Access Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Nous Trouver</h2>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <strong>Adresse</strong>
+                                <p>65 Route de Blagnac, 31300 Toulouse</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="bus"></i>
+                            </div>
+                            <div>
+                                <strong>Accès Transport</strong>
+                                <p>L1, Bus 70 — Arrêt "Cité Madrid" (juste en face)</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div>
+                                <strong>Téléphone</strong>
+                                <p><a href="tel:0756916593">07 56 91 65 93</a></p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div>
+                                <strong>Email</strong>
+                                <p><a href="mailto:contact@reparephone-toulouse.fr">contact@reparephone-toulouse.fr</a></p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <div>
+                                <strong>Horaires</strong>
+                                <p>Lun-Ven: 9h-19h / Sam: 10h-18h</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.3582534575!2d1.41113!3d43.61662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb6b7b7b7b7b%3A0x7b7b7b7b7b7b7b7b!2s65%20Route%20de%20Blagnac%2C%2031300%20Toulouse!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr" 
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Brands Section -->
+        <section class="brands">
+            <div class="brands-track">
+                <div class="brands-flex">
+                    <div class="brand-item"><i data-lucide="apple"></i> Apple</div>
+                    <div class="brand-item"><i data-lucide="smartphone"></i> Samsung</div>
+                    <div class="brand-item"><i data-lucide="smartphone"></i> Huawei</div>
+                    <div class="brand-item"><i data-lucide="smartphone"></i> Xiaomi</div>
+                    <div class="brand-item"><i data-lucide="smartphone"></i> Oppo</div>
+                    <div class="brand-item"><i data-lucide="smartphone"></i> Google</div>
+                    <div class="brand-item"><i data-lucide="smartphone"></i> Realme</div>
+                    <div class="brand-item"><i data-lucide="smartphone"></i> Sony</div>
+                    <!-- Duplicate for loop -->
+                    <div class="brand-item"><i data-lucide="apple"></i> Apple</div>
+                    <div class="brand-item"><i data-lucide="smartphone"></i> Samsung</div>
+                    <div class="brand-item"><i data-lucide="smartphone"></i> Huawei</div>
+                    <div class="brand-item"><i data-lucide="smartphone"></i> Xiaomi</div>
+                    <div class="brand-item"><i data-lucide="smartphone"></i> Oppo</div>
+                    <div class="brand-item"><i data-lucide="smartphone"></i> Google</div>
+                    <div class="brand-item"><i data-lucide="smartphone"></i> Realme</div>
+                    <div class="brand-item"><i data-lucide="smartphone"></i> Sony</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <div class="cta-content">
+                        <h2>Prêt à redonner vie à votre téléphone ?</h2>
+                        <p>Passez en boutique sans rendez-vous ou appelez-nous pour un devis gratuit immédiat.</p>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="tel:0756916593" class="btn btn-primary">
+                            <i data-lucide="phone" class="icon-sm"></i>
+                            07 56 91 65 93
+                        </a>
+                        <a href="#contact" class="btn btn-white">Nous trouver</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Mascot Bubble Interaction -->
+    <div class="mascot-sticky">
+        <div class="bubble">Besoin d'aide ? Je répare votre téléphone en 30 min !</div>
+        <img src="mascotte-brigade.png" alt="Aide Mascotte">
+    </div>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <img src="logo.png" alt="La Brigade Mobile" class="footer-logo">
+                <p>Expert en réparation express de smartphones et tablettes à Toulouse. Qualité premium, garantie 1 an et service sans rendez-vous.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Nos Services</h4>
+                <ul>
+                    <li><a href="#services">Réparation Écran</a></li>
+                    <li><a href="#services">Remplacement Batterie</a></li>
+                    <li><a href="#services">Connecteur de Charge</a></li>
+                    <li><a href="#services">Désoxydation</a></li>
+                    <li><a href="#services">Micro-soudure</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Zone d'Intervention</h4>
+                <ul>
+                    <li><a href="#">Toulouse Centre</a></li>
+                    <li><a href="#">Blagnac</a></li>
+                    <li><a href="#">Colomiers</a></li>
+                    <li><a href="#">Tournefeuille</a></li>
+                    <li><a href="#">L'Union</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h4>Contact & Accès</h4>
+                <div class="footer-contact-item">
+                    <i data-lucide="map-pin"></i>
+                    <span>65 Route de Blagnac, 31300 Toulouse</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i data-lucide="phone"></i>
+                    <span>07 56 91 65 93</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i data-lucide="mail"></i>
+                    <span>contact@reparephone-toulouse.fr</span>
+                </div>
+                <div class="payment-methods">
+                    <i data-lucide="credit-card"></i>
+                    <i data-lucide="banknote"></i>
+                    <i data-lucide="smartphone"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>&copy; 2024 La Brigade Mobile. Tous droits réservés.</p>
+                <div class="bottom-links">
+                    <a href="javascript:void(0)" id="open-legal">Mentions Légales</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <p>Développée par <a href="https://microdidact.com/" target="_blank" class="dev-link">Microdidact</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Legal Modal -->
+    <div id="legal-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Mentions Légales</h2>
+            <div class="modal-body">
+                <h3>1. Présentation du site</h3>
+                <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :</p>
+                <p><strong>Propriétaire :</strong> La Brigade Mobile – 65 Route de Blagnac, 31300 Toulouse</p>
+                <p><strong>Responsable publication :</strong> La Brigade Mobile</p>
+                <p><strong>Hébergeur :</strong> Vercel Inc. – 340 S Lemon Ave #4133 Walnut, CA 91789</p>
+                
+                <h3>2. Conditions générales d’utilisation du site</h3>
+                <p>L’utilisation du site implique l’acceptation pleine et entière des conditions générales d’utilisation ci-après décrites. Ces conditions d’utilisation sont susceptibles d’être modifiées ou complétées à tout moment.</p>
+                
+                <h3>3. Description des services fournis</h3>
+                <p>Le site a pour objet de fournir une information concernant l’ensemble des activités de la société. La Brigade Mobile s’efforce de fournir sur le site des informations aussi précises que possible.</p>
+                
+                <h3>4. Propriété intellectuelle et contrefaçons</h3>
+                <p>La Brigade Mobile est propriétaire des droits de propriété intellectuelle ou détient les droits d’usage sur tous les éléments accessibles sur le site, notamment les textes, images, graphismes, logo, icônes, sons, logiciels.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+

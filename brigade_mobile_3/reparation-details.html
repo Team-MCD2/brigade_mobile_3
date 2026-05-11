@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails Réparation & Tarifs | iPhone, Samsung | Toulouse</title>
+    <meta name="description" content="Consultez les tarifs de réparation détaillés pour votre modèle. Écran, batterie, connecteur de charge. Intervention express à Toulouse.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="header-left">
+                <a href="index.html" class="logo-group">
+                    <img src="logo.png" alt="Logo" class="main-logo">
+                    <div class="v-line"></div>
+                    <div class="brand-text">
+                        <span class="brand-name">La Brigade Mobile</span>
+                        <span class="brand-sub">TOULOUSE</span>
+                    </div>
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="reparations.html" class="active dropbtn">RÉPARATIONS <i data-lucide="chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="reparation-details.html?brand=Apple"><strong>Apple</strong><span>iPhone, iPad, Mac</span></a>
+                        <a href="reparation-details.html?brand=Samsung"><strong>Samsung</strong><span>Séries S, A, Z</span></a>
+                    </div>
+                </li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="boutique.html">BOUTIQUE</a></li>
+                <li><a href="index.html#avis" class="nav-pill">AVIS</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+
+            <div class="header-right">
+                <a href="tel:0756916593" class="phone-icon-link"><i data-lucide="phone"></i></a>
+                <a href="devis.html" class="btn btn-devis">DEVIS</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section style="padding: 140px 0 60px; background: #fff;">
+            <div class="container">
+                <div id="brand-view">
+                    <span class="badge-pill" id="brand-badge">APPLE</span>
+                    <h1 id="brand-title" style="font-size: 3.5rem; font-weight: 800; margin-bottom: 20px;">Réparation Apple à Toulouse</h1>
+                    <p style="color: var(--gray);">Choisissez votre modèle — prix à partir de affichés. Besoin d'un autre appareil ? <a href="devis.html" style="color: var(--primary); text-decoration: none; font-weight: 600;">Devis guidé</a>.</p>
+                    
+                    <div class="search-container">
+                        <i data-lucide="search" class="search-icon-pos"></i>
+                        <input type="text" class="search-input" placeholder="Rechercher un modèle...">
+                    </div>
+
+                    <div class="selection-grid" style="grid-template-columns: repeat(3, 1fr);" id="models-list">
+                        <!-- Content will be injected by JS based on brand -->
+                    </div>
+                </div>
+
+                <div id="model-view" style="display: none;">
+                    <h1 id="model-title" style="font-size: 3.5rem; font-weight: 800; margin-bottom: 20px;">Réparation iPhone 11</h1>
+                    <p style="color: var(--gray);" id="model-subtitle">Exemple écran : <strong>109 €</strong> en boutique (indicatif — diagnostic gratuit).</p>
+
+                    <div class="repair-detail-grid" id="repairs-list">
+                        <!-- Repair cards injected here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const data = {
+            Apple: [
+                { name: 'iPhone 11', price: '0' },
+                { name: 'iPhone 12', price: '0' },
+                { name: 'iPhone 13', price: '0' },
+                { name: 'iPhone 14', price: '0' },
+                { name: 'iPhone 15', price: '0' }
+            ],
+            Samsung: [
+                { name: 'Galaxy S21', price: '39' },
+                { name: 'Galaxy S22', price: '39' },
+                { name: 'Galaxy S23', price: '39' },
+                { name: 'Galaxy A54', price: '35' },
+                { name: 'Galaxy S24', price: '39' },
+                { name: 'Galaxy S24 Ultra', price: '39' },
+                { name: 'Galaxy Z Flip 5', price: '45' },
+                { name: 'Galaxy Z Fold 5', price: '49' },
+                { name: 'Galaxy A34', price: '35' },
+                { name: 'Galaxy A55', price: '36' },
+                { name: 'Galaxy S25', price: '39' },
+                { name: 'Galaxy S25 Ultra', price: '42' }
+            ]
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const brand = params.get('brand') || 'Apple';
+            const model = params.get('model');
+
+            if (model) {
+                document.getElementById('brand-view').style.display = 'none';
+                document.getElementById('model-view').style.display = 'block';
+                document.getElementById('model-title').textContent = `Réparation ${model}`;
+                
+                // Inject repairs for this model (mock data)
+                const repairs = [
+                    { name: 'Écran / vitre / tactile', price: '109', compare: '46-100' },
+                    { name: 'Batterie', price: '49', compare: '11-24' },
+                    { name: 'Connecteur de charge', price: '59', compare: '15-31' }
+                ];
+                const list = document.getElementById('repairs-list');
+                repairs.forEach(r => {
+                    list.innerHTML += `
+                        <div class="repair-detail-card">
+                            <h3>${r.name}</h3>
+                            <div class="price-box">
+                                <div class="price-info">
+                                    <span class="price-label">à partir de ${r.price} €</span>
+                                    <span class="price-compare">Ailleurs (même réparation, est.) : ${r.compare} €</span>
+                                </div>
+                                <a href="devis.html?brand=${brand}&model=${model}&problem=${r.name}" class="btn-small-devis">Devis</a>
+                            </div>
+                        </div>
+                    `;
+                });
+
+            } else {
+                document.getElementById('brand-badge').textContent = brand.toUpperCase();
+                document.getElementById('brand-title').textContent = `Réparation ${brand} à Toulouse`;
+                
+                const list = document.getElementById('models-list');
+                const models = data[brand] || [];
+                
+                models.forEach(m => {
+                    list.innerHTML += `
+                        <a href="reparation-details.html?brand=${brand}&model=${m.name}" class="model-card">
+                            <h3>${m.name}</h3>
+                            <p>À partir de ${m.price} €</p>
+                        </a>
+                    `;
+                });
+
+                // Add "Other Model"
+                list.innerHTML += `
+                    <a href="devis.html?brand=${brand}&model=Autre" class="model-card" style="border-style: dashed; background: #fafafa;">
+                        <h3>Autre Modèle</h3>
+                        <p>Je renseigne mon modèle</p>
+                    </a>
+                `;
+            }
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

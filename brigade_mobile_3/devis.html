@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devis Gratuit en Ligne | Prix Réparation Téléphone | Toulouse</title>
+    <meta name="description" content="Obtenez une estimation immédiate pour la réparation de votre smartphone ou tablette à Toulouse. Devis gratuit pour écran cassé, batterie et plus encore.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .wizard-step-content { display: none; }
+        .wizard-step-content.active { display: block; animation: fadeIn 0.4s ease-out; }
+        .selection-item.selected { border-color: var(--primary); background: rgba(0, 119, 200, 0.05); box-shadow: 0 0 0 2px var(--primary); }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="header-left">
+                <a href="index.html" class="logo-group">
+                    <img src="logo.png" alt="Logo" class="main-logo">
+                    <div class="v-line"></div>
+                    <div class="brand-text">
+                        <span class="brand-name">La Brigade Mobile</span>
+                        <span class="brand-sub">TOULOUSE</span>
+                    </div>
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="reparations.html" class="dropbtn">RÉPARATIONS <i data-lucide="chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="reparations.html"><strong>Apple</strong><span>iPhone, iPad, Mac</span></a>
+                        <a href="reparations.html"><strong>Samsung</strong><span>Séries S, A, Z</span></a>
+                        <a href="devis.html"><strong>Autre</strong><span>Devis guidé</span></a>
+                    </div>
+                </li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="boutique.html">BOUTIQUE</a></li>
+                <li><a href="index.html#avis" class="nav-pill">AVIS</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+
+            <div class="header-right">
+                <a href="tel:0756916593" class="phone-icon-link"><i data-lucide="phone"></i></a>
+                <a href="devis.html" class="btn btn-devis">DEVIS</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Obtenez votre <span class="highlight-gradient">devis gratuit</span></h1>
+                <p>Réponse en moins de 30 minutes. Diagnostic immédiat.</p>
+            </div>
+        </section>
+
+        <section style="padding: 60px 0 100px;">
+            <div class="container">
+                <div class="wizard-container">
+                    <div class="wizard-steps">
+                        <div class="step active" data-step="1">1</div>
+                        <div class="step" data-step="2">2</div>
+                        <div class="step" data-step="3">3</div>
+                        <div class="step" data-step="4">4</div>
+                    </div>
+
+                    <div class="form-card">
+                        <!-- Step 1: Brand -->
+                        <div id="step-1" class="wizard-step-content active">
+                            <h2 style="text-align: center; margin-bottom: 40px;">Quelle est la marque de votre appareil ?</h2>
+                            <div class="selection-grid">
+                                <div class="selection-item" data-value="Apple">
+                                    <div class="selection-header"><i data-lucide="apple"></i><strong>Apple</strong></div>
+                                    <p>iPhone, iPad, Mac</p>
+                                </div>
+                                <div class="selection-item" data-value="Samsung">
+                                    <div class="selection-header"><i data-lucide="smartphone"></i><strong>Samsung</strong></div>
+                                    <p>Galaxy S, A, Note</p>
+                                </div>
+                                <div class="selection-item" data-value="Autre">
+                                    <div class="selection-header"><i data-lucide="more-horizontal"></i><strong>Autre</strong></div>
+                                    <p>Huawei, Xiaomi, etc.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Model -->
+                        <div id="step-2" class="wizard-step-content">
+                            <h2 style="text-align: center; margin-bottom: 40px;">Quel est le modèle ?</h2>
+                            <div id="model-selection-area">
+                                <div class="selection-grid" id="dynamic-models-grid">
+                                    <!-- Models injected here by JS -->
+                                </div>
+                            </div>
+                            <div id="custom-model-input" style="display: none; margin-top: 20px;">
+                                <div class="v2-form-group">
+                                    <label>Précisez le modèle</label>
+                                    <input type="text" id="other-model-name" placeholder="Ex: Galaxy S20 Ultra">
+                                </div>
+                                <div style="text-align: right;">
+                                    <button class="btn-v2 btn-v2-primary next-step-btn">Suivant</button>
+                                </div>
+                            </div>
+                            <button class="btn prev-step" style="margin-top: 20px;">Retour</button>
+                        </div>
+
+                        <!-- Step 3: Problem -->
+                        <div id="step-3" class="wizard-step-content">
+                            <h2 style="text-align: center; margin-bottom: 40px;">Quel est le problème ?</h2>
+                            <div class="selection-grid">
+                                <div class="selection-item" data-value="Ecran">
+                                    <div class="selection-header"><i data-lucide="smartphone"></i><strong>Écran Cassé</strong></div>
+                                </div>
+                                <div class="selection-item" data-value="Batterie">
+                                    <div class="selection-header"><i data-lucide="battery"></i><strong>Batterie</strong></div>
+                                </div>
+                                <div class="selection-item" data-value="Eau">
+                                    <div class="selection-header"><i data-lucide="droplets"></i><strong>Oxydation</strong></div>
+                                </div>
+                            </div>
+                            <button class="btn prev-step" style="margin-top: 20px;">Retour</button>
+                        </div>
+
+                        <!-- Step 4: Contact -->
+                        <div id="step-4" class="wizard-step-content">
+                            <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 40px; text-align: right;">Vos coordonnées</h2>
+                            <form id="devis-final-form" style="max-width: 500px;">
+                                <div class="v2-form-group">
+                                    <label>Nom Complet</label>
+                                    <input type="text" placeholder="Ex: Jean Dupont" required>
+                                </div>
+                                <div class="v2-form-group">
+                                    <label>Téléphone</label>
+                                    <input type="tel" placeholder="06 00 00 00 00" required>
+                                </div>
+                                <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 30px;">
+                                    <button type="submit" class="btn-v2 btn-v2-primary" style="width: fit-content;">Envoyer ma demande</button>
+                                    <button type="button" class="btn-v2 btn-v2-secondary prev-step" style="width: fit-content;">Retour</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modelData = {
+                Apple: ['iPhone 15', 'iPhone 14', 'iPhone 13', 'iPhone 12', 'iPhone 11'],
+                Samsung: ['Galaxy S24', 'Galaxy S23', 'Galaxy S22', 'Galaxy S21', 'Galaxy A54']
+            };
+
+            const params = new URLSearchParams(window.location.search);
+            const state = { 
+                step: 1, 
+                brand: params.get('brand') || '', 
+                model: params.get('model') || '', 
+                problem: params.get('problem') || '' 
+            };
+
+            const steps = document.querySelectorAll('.wizard-step-content');
+            const stepIndicators = document.querySelectorAll('.step');
+            const customModelArea = document.getElementById('custom-model-input');
+            const modelSelectionArea = document.getElementById('model-selection-area');
+            const dynamicGrid = document.getElementById('dynamic-models-grid');
+
+            function injectModels() {
+                const models = modelData[state.brand] || [];
+                dynamicGrid.innerHTML = '';
+                models.forEach(m => {
+                    const item = document.createElement('div');
+                    item.className = 'selection-item';
+                    item.dataset.value = m;
+                    item.innerHTML = `<strong>${m}</strong>`;
+                    item.addEventListener('click', () => handleSelection(item, m));
+                    dynamicGrid.appendChild(item);
+                });
+                
+                // Add Autre
+                const other = document.createElement('div');
+                other.className = 'selection-item';
+                other.dataset.value = 'Autre';
+                other.innerHTML = `<strong>Autre Modèle</strong>`;
+                other.addEventListener('click', () => handleSelection(other, 'Autre'));
+                dynamicGrid.appendChild(other);
+            }
+
+            function handleSelection(item, value) {
+                const parent = item.parentElement;
+                parent.querySelectorAll('.selection-item').forEach(i => i.classList.remove('selected'));
+                item.classList.add('selected');
+
+                if (state.step === 1) {
+                    state.brand = value;
+                    injectModels(); // Refresh models for step 2
+                }
+                if (state.step === 2) state.model = value;
+                if (state.step === 3) state.problem = value;
+
+                if (state.step === 2 && value === 'Autre') {
+                    updateUI();
+                    return;
+                }
+
+                setTimeout(() => {
+                    if (state.step < 4) {
+                        state.step++;
+                        updateUI();
+                    }
+                }, 300);
+            }
+
+            function updateUI() {
+                steps.forEach((s, i) => {
+                    s.classList.toggle('active', i + 1 === state.step);
+                });
+                stepIndicators.forEach((s, i) => {
+                    s.classList.toggle('active', i + 1 <= state.step);
+                });
+
+                if (state.step === 2) {
+                    injectModels();
+                    if (state.model === 'Autre') {
+                        customModelArea.style.display = 'block';
+                        modelSelectionArea.style.display = 'none';
+                    } else {
+                        customModelArea.style.display = 'none';
+                        modelSelectionArea.style.display = 'block';
+                    }
+                }
+            }
+
+            // Initial Setup
+            if (state.brand && state.model && state.problem) {
+                state.step = 4;
+            } else if (state.brand && state.model) {
+                state.step = (state.model === 'Autre') ? 2 : 3;
+            } else if (state.brand) {
+                state.step = 2;
+            }
+
+            updateUI();
+
+            // Bind static items (Step 1 and 3)
+            document.querySelectorAll('#step-1 .selection-item, #step-3 .selection-item').forEach(item => {
+                item.addEventListener('click', () => handleSelection(item, item.dataset.value));
+            });
+
+            document.querySelector('.next-step-btn').addEventListener('click', () => {
+                const val = document.getElementById('other-model-name').value;
+                if (val) { state.model = val; state.step = 3; updateUI(); }
+            });
+
+            // Navigation
+            document.querySelectorAll('.prev-step').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    if (state.step > 1) {
+                        state.step--;
+                        updateUI();
+                    }
+                });
+            });
+
+            document.getElementById('devis-final-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert(`Merci ! Votre demande pour un ${state.brand} ${state.model} (${state.problem}) a été envoyée.`);
+                window.location.href = 'index.html';
+            });
+
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
